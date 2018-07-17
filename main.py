@@ -40,7 +40,7 @@ def download_images(prefix, dirname, links):
         print('Downloading {0} of {1} images'.format(index + 1, length))
         url = prefix + link
         f = urllib.request.urlopen(url)
-        save_image_to_file(f, dirname, index)
+        save_image_to_file(f, dirname, str(index).zfill(len(str(length))))
         del f
 
 
